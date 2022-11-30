@@ -318,6 +318,7 @@ class GetConnect extends GetConnectInterface {
                 .map((e) => GraphQLError(
                       code: e['extensions']['code']?.toString(),
                       message: e['message']?.toString(),
+                      extensions: e['extensions'],
                     ))
                 .toList());
       }
@@ -353,6 +354,7 @@ class GetConnect extends GetConnectInterface {
                 .map((e) => GraphQLError(
                       code: e['extensions']['code']?.toString(),
                       message: e['message']?.toString(),
+                      extensions: e['extensions'],
                     ))
                 .toList());
       }
